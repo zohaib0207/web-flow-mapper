@@ -14,15 +14,19 @@ public class Main {
 
     // Stores already visited URLs
     static HashSet<String> visited = new HashSet<>();
+    static final int MAX_DEPTH = 2;
 
     public static void main(String[] args) throws Exception {
 
-        explore("https://example.com");
+        explore("https://example.com", 0);
     }
 
-    public static void explore(String url) throws Exception {
+    public static void explore(String url,int depth) throws Exception {
 
         // Skip already visited URLs
+	if (depth > MAX_DEPTH) {
+    return;
+}
         if (visited.contains(url)) {
             return;
         }
@@ -30,7 +34,8 @@ public class Main {
         // Mark URL as visited
         visited.add(url);
 
-        System.out.println("\nVisiting: " + url);
+        System.out.println("\nDepth: " + depth);
+	System.out.println("Visiting: " + url);
 
         // Create HTTP Client
         HttpClient client = HttpClient.newBuilder()
@@ -62,7 +67,7 @@ public class Main {
             String extractedUrl = link.absUrl("href");
 
             System.out.println("Discovered: " + extractedUrl);
-	    explore(extractedUrl);
+	    explore(extractedUrl,depth+1);
         }
     }
 }
