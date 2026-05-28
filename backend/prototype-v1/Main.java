@@ -4,21 +4,43 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
 import java.util.HashSet;
+import java.io.PrintWriter;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+import java.util.ArrayList;
+
 
 public class Main {
 
     // Stores already visited URLs
     static HashSet<String> visited = new HashSet<>();
+    static ArrayList<String> graphEdges = new ArrayList<>();
     static final int MAX_DEPTH = 2;
 
     public static void main(String[] args) throws Exception {
 
         explore("https://example.com", 0);
+	System.out.println("\nGenerated Graph Edges:");
+
+for (String edge : graphEdges) {
+    System.out.println(edge);
+}
+PrintWriter writer = new PrintWriter("graph.dot");
+
+writer.println("digraph G {");
+
+for (String edge : graphEdges) {
+    writer.println(edge);
+}
+
+writer.println("}");
+
+writer.close();
+
+System.out.println("\nDOT file generated successfully.");
     }
 
     public static void explore(String url,int depth) throws Exception {
@@ -67,7 +89,9 @@ public class Main {
             String extractedUrl = link.absUrl("href");
 
             System.out.println("Discovered: " + extractedUrl);
+	    graphEdges.add("\"" + url + "\" -> \"" + extractedUrl + "\";");
 	    explore(extractedUrl,depth+1);
+	    
         }
     }
 }

@@ -1,0 +1,5 @@
+digraph G {
+"https://example.com" -> "https://iana.org/domains/example";
+"https://iana.org/domains/example" -> "https://www.iana.org/domains/example";
+"https://www.iana.org/domains/example" -> "http://www.iana.org/help/example-domains";
+}
