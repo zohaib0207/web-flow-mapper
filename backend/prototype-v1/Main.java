@@ -85,6 +85,18 @@ public class Main {
         Document doc = Jsoup.parse(response.body(), url);
 
         Elements links = doc.select("a[href]");
+Elements forms = doc.select("form");
+
+for (Element form : forms) {
+
+    String action = form.attr("action");
+    String method = form.attr("method");
+
+    System.out.println("\nForm Discovered:");
+    System.out.println("Action: " + action);
+    System.out.println("Method: " + method);
+}	
+
 
         for (Element link : links) {
 
