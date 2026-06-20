@@ -14,13 +14,45 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+//Additions - Post EMAIL : 
+class FieldSchema {
+
+    String name;
+    String type;
+
+    FieldSchema(String name, String type) {
+        this.name = name;
+        this.type = type;
+    }
+}
+
+class FormSchema {
+
+    String formId;
+    String sourceUrl;
+    String action;
+    String method;
+
+    ArrayList<FieldSchema> fields =
+            new ArrayList<>();
+}
+class TransitionSchema {
+
+    String from;
+    String to;
+    String method;
+    String trigger;
+}
+
 public class Main {
 
     static HashSet<String> visited = new HashSet<>();
 
     static ArrayList<String> graphEdges = new ArrayList<>();
 
-    static final int MAX_DEPTH = 0;
+    static ArrayList<TransitionSchema> transitions =new ArrayList<>();
+
+    static final int MAX_DEPTH = 1;
 
     public static void main(String[] args) throws Exception {
 
@@ -32,11 +64,28 @@ public class Main {
 
         explore(targetUrl, 0);
 
+
         System.out.println("\nGenerated Graph Edges:");
 
         for (String edge : graphEdges) {
             System.out.println(edge);
         }
+	System.out.println("\nGenerated Graph Edges:");
+
+for (String edge : graphEdges) {
+    System.out.println(edge);
+}
+
+System.out.println("\nTransitions:");
+
+for (TransitionSchema t : transitions) {
+
+    System.out.println(
+            t.from + " -> " +
+            t.to + " [" +
+            t.trigger + "]"
+    );
+}
 
         PrintWriter writer = new PrintWriter("graph.dot");
 
@@ -95,6 +144,24 @@ for (Element form : forms) {
     System.out.println("\nForm Discovered:");
     System.out.println("Action: " + action);
     System.out.println("Method: " + method);
+    FormSchema formSchema = new FormSchema();
+
+formSchema.sourceUrl = url;
+formSchema.action = action;
+formSchema.method = method;
+    Elements inputs = form.select("input");
+
+    for (Element input : inputs) {
+
+        String name = input.attr("name");
+        String type = input.attr("type");
+
+        System.out.println(
+                "Input: " + name +
+                " Type: " + type
+        );
+    }
+
 }	
 
 
@@ -106,6 +173,14 @@ for (Element form : forms) {
 
             if (!extractedUrl.isEmpty()
                     && extractedUrl.startsWith("http")) {
+		    TransitionSchema t = new TransitionSchema();
+
+t.from = url;
+t.to = extractedUrl;
+t.method = "GET";
+t.trigger = "link_click";
+
+transitions.add(t);
 
                 String safeParent = url.replace("\"", "");
                 String safeChild = extractedUrl.replace("\"", "");
