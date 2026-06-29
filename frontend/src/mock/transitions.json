@@ -1,0 +1,26 @@
+[
+  {
+    "from": "1",
+    "to": "2",
+    "method": "GET",
+    "trigger": "href"
+  },
+  {
+    "from": "2",
+    "to": "3",
+    "method": "POST",
+    "trigger": "submit"
+  },
+  {
+    "from": "3",
+    "to": "4",
+    "method": "GET",
+    "trigger": "href"
+  },
+  {
+    "from": "4",
+    "to": "3",
+    "method": "GET",
+    "trigger": "button_click"
+  }
+]

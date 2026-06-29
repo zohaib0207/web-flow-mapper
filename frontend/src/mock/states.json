@@ -1,0 +1,30 @@
+[
+  {
+    "id": "1",
+    "state": "/login",
+    "source_url": "/login",
+    "forms": 1,
+    "links": 2
+  },
+  {
+    "id": "2",
+    "state": "/register",
+    "source_url": "/register",
+    "forms": 2,
+    "links": 1
+  },
+  {
+    "id": "3",
+    "state": "/dashboard",
+    "source_url": "/dashboard",
+    "forms": 0,
+    "links": 4
+  },
+  {
+    "id": "4",
+    "state": "/profile",
+    "source_url": "/profile",
+    "forms": 1,
+    "links": 3
+  }
+]
