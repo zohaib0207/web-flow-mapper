@@ -1,4 +1,6 @@
 import java.net.URI;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
@@ -13,12 +15,13 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-
+import com.fasterxml.jackson.databind.ObjectMapper;
+import java.io.File;
 //Additions - Post EMAIL : 
 class FieldSchema {
 
-    String name;
-    String type;
+   public  String name;
+    public  String type;
 
     FieldSchema(String name, String type) {
         this.name = name;
@@ -28,20 +31,20 @@ class FieldSchema {
 
 class FormSchema {
 
-    String formId;
-    String sourceUrl;
-    String action;
-    String method;
+   public  String formId;
+   public  String sourceUrl;
+    public String action;
+    public  String method;
 
     ArrayList<FieldSchema> fields =
             new ArrayList<>();
 }
 class TransitionSchema {
 
-    String from;
-    String to;
-    String method;
-    String trigger;
+   public  String from;
+   public String to;
+   public  String method;
+   public  String trigger;
 }
 
 public class Main {
@@ -52,6 +55,8 @@ public class Main {
 
     static ArrayList<TransitionSchema> transitions =new ArrayList<>();
 
+    static ArrayList<FormSchema> discoveredForms = new ArrayList<>();
+
     static final int MAX_DEPTH = 1;
 
     public static void main(String[] args) throws Exception {
@@ -61,11 +66,35 @@ public class Main {
         System.out.print("Enter Target URL: ");
 
         String targetUrl = scanner.nextLine();
+	String timestamp =
+        LocalDateTime.now()
+                .format(
+                        DateTimeFormatter.ofPattern(
+                                "yyyyMMdd_HHmmss"
+                        )
+                );
+
+String dotFile =
+        "graph_" + timestamp + ".dot";
+
+String pngFile =
+        "graph_" + timestamp + ".png";
 
         explore(targetUrl, 0);
+	ObjectMapper mapper = new ObjectMapper();
 
+mapper.writerWithDefaultPrettyPrinter()
+      .writeValue(new File("json/forms.json"), discoveredForms);
 
         System.out.println("\nGenerated Graph Edges:");
+	for (TransitionSchema t : transitions) {
+
+    System.out.println(
+            t.from + " -> " +
+            t.to + " [" +
+            t.trigger + "]"
+    );
+}
 
         for (String edge : graphEdges) {
             System.out.println(edge);
@@ -77,15 +106,6 @@ for (String edge : graphEdges) {
 }
 
 System.out.println("\nTransitions:");
-
-for (TransitionSchema t : transitions) {
-
-    System.out.println(
-            t.from + " -> " +
-            t.to + " [" +
-            t.trigger + "]"
-    );
-}
 
         PrintWriter writer = new PrintWriter("graph.dot");
 
@@ -99,7 +119,7 @@ for (TransitionSchema t : transitions) {
 
         writer.close();
 
-        System.out.println("\nDOT file generated successfully.");
+       System.out.println("\nDOT file generated successfully.");
     }
 
     public static void explore(String url, int depth) throws Exception {
@@ -160,8 +180,10 @@ formSchema.method = method;
                 "Input: " + name +
                 " Type: " + type
         );
+	FieldSchema field = new FieldSchema(name, type);
+        formSchema.fields.add(field);
     }
-
+discoveredForms.add(formSchema);
 }	
 
 
