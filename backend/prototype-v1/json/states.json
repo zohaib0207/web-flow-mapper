@@ -1,0 +1,11 @@
+[ {
+  "stateId" : "S1",
+  "url" : "https://iana.org/domains/example",
+  "forms" : [ ],
+  "links" : [ "https://www.iana.org/domains/example" ]
+}, {
+  "stateId" : "S0",
+  "url" : "https://example.com",
+  "forms" : [ ],
+  "links" : [ "https://iana.org/domains/example" ]
+} ]

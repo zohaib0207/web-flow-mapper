@@ -1,0 +1,11 @@
+[ {
+  "from" : "https://example.com",
+  "to" : "https://iana.org/domains/example",
+  "method" : "GET",
+  "trigger" : "link_click"
+}, {
+  "from" : "https://iana.org/domains/example",
+  "to" : "https://www.iana.org/domains/example",
+  "method" : "GET",
+  "trigger" : "link_click"
+} ]
