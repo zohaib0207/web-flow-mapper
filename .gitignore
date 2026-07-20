@@ -1,4 +1,4 @@
-# Node
+ Node
 node_modules/
 dist/
 .env
@@ -18,3 +18,8 @@ backend/prototype-v1/oracleJdk-26/
 
 # Generated scan output (optional)
 backend/prototype-v1/json/
+
+backend/prototype-v1/config.properties
+backend/prototype-v1/json/
+*.class
+*.png

@@ -108,12 +108,18 @@ public class Main {
     static ArrayList<FormSchema> discoveredForms = new ArrayList<>();
 
     static final int MAX_DEPTH = 1;
-
+    
+    static String BASE_HOST;
 
 
 
     public static void main(String[] args) throws Exception {
 
+	GeminiClient client = new GeminiClient();
+	System.out.println("Gemini API Key length: " + client.getApiKey().length());
+	
+	
+		
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Enter Target URL: ");
@@ -178,7 +184,9 @@ public class Main {
         writer.close();
 
         System.out.println("\nDOT file generated successfully.");
-        
+	
+	//AI Analysis 
+	AIAnalysisService.generateAnalysis();        
         scanner.close();
     }
 
@@ -356,7 +364,12 @@ public class Main {
                 graphEdges.add("\"" + safeParent + "\" -> \"" + safeChild + "\";");
 
                 System.out.println("Priority: " + t.priority);
+		
+		URI current = URI.create(extractedUrl);
 
+		if (!current.getHost().equals(BASE_HOST)) {
+    			continue;
+		}
                 explore(extractedUrl, depth + 1);
 
             }
