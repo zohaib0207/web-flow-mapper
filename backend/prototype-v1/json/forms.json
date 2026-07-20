@@ -1,1 +1,6 @@
-[ ]
+[ {
+  "formId" : "F0",
+  "sourceUrl" : "http://demo.testfire.net",
+  "action" : "/search.jsp",
+  "method" : "get"
+} ]

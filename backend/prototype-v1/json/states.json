@@ -1,6 +1,6 @@
 [ {
   "stateId" : "S0",
-  "url" : "https://example.com/",
+  "url" : "http://demo.testfire.net",
   "depth" : 0,
   "statusCode" : 200,
   "hasLoginForm" : false,
@@ -8,7 +8,12 @@
   "discoveredByMutation" : false,
   "isUnknownState" : true,
   "discoveryReason" : "Previously Unknown State",
-  "timestamp" : "2026-07-20T06:38:23.605623987",
-  "forms" : [ ],
-  "links" : [ "https://iana.org/domains/example" ]
+  "timestamp" : "2026-07-20T14:41:17.183722981",
+  "forms" : [ {
+    "formId" : "F0",
+    "sourceUrl" : "http://demo.testfire.net",
+    "action" : "/search.jsp",
+    "method" : "get"
+  } ],
+  "links" : [ "http://demo.testfire.net/index.jsp", "http://demo.testfire.net/login.jsp", "http://demo.testfire.net/index.jsp?content=inside_contact.htm", "http://demo.testfire.net/feedback.jsp", "http://demo.testfire.net/login.jsp", "http://demo.testfire.net/index.jsp?content=personal.htm", "http://demo.testfire.net/index.jsp?content=business.htm", "http://demo.testfire.net/index.jsp?content=inside.htm", "http://demo.testfire.net/index.jsp?content=personal.htm", "http://demo.testfire.net/index.jsp?content=personal_deposit.htm", "http://demo.testfire.net/index.jsp?content=personal_checking.htm", "http://demo.testfire.net/index.jsp?content=personal_loans.htm", "http://demo.testfire.net/index.jsp?content=personal_cards.htm", "http://demo.testfire.net/index.jsp?content=personal_investments.htm", "http://demo.testfire.net/index.jsp?content=personal_other.htm", "http://demo.testfire.net/index.jsp?content=business.htm", "http://demo.testfire.net/index.jsp?content=business_deposit.htm", "http://demo.testfire.net/index.jsp?content=business_lending.htm", "http://demo.testfire.net/index.jsp?content=business_cards.htm", "http://demo.testfire.net/index.jsp?content=business_insurance.htm", "http://demo.testfire.net/index.jsp?content=business_retirement.htm", "http://demo.testfire.net/index.jsp?content=business_other.htm", "http://demo.testfire.net/index.jsp?content=inside.htm", "http://demo.testfire.net/index.jsp?content=inside_about.htm", "http://demo.testfire.net/index.jsp?content=inside_contact.htm", "http://demo.testfire.net/cgi.exe", "http://demo.testfire.net/index.jsp?content=inside_investor.htm", "http://demo.testfire.net/index.jsp?content=inside_press.htm", "http://demo.testfire.net/index.jsp?content=inside_careers.htm", "http://demo.testfire.net/subscribe.jsp", "http://demo.testfire.net/index.jsp?content=personal_savings.htm", "http://demo.testfire.net/index.jsp?content=personal_loans.htm", "http://demo.testfire.net/index.jsp?content=business_cards.htm", "http://demo.testfire.net/index.jsp?content=business_retirement.htm", "http://demo.testfire.net/index.jsp?content=privacy.htm", "http://demo.testfire.net/default.jsp?content=security.htm", "http://demo.testfire.net/survey_questions.jsp", "http://demo.testfire.net/index.jsp?content=privacy.htm", "http://demo.testfire.net/index.jsp?content=security.htm", "http://demo.testfire.net/status_check.jsp", "http://demo.testfire.net/swagger/index.html", "https://github.com/AppSecDev/AltoroJ/", "https://www.hcl-software.com/appscan/" ]
 } ]

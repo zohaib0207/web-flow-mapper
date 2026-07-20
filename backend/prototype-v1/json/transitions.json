@@ -1,7 +1,427 @@
 [ {
   "transitionId" : "T0",
-  "from" : "https://example.com/",
-  "to" : "https://iana.org/domains/example",
+  "from" : "http://demo.testfire.net",
+  "to" : "http://demo.testfire.net/index.jsp",
+  "method" : "GET",
+  "trigger" : "link_click",
+  "depth" : 0,
+  "discoveredByMutation" : false,
+  "priority" : 1,
+  "priorityReason" : "Normal Navigation"
+}, {
+  "transitionId" : "T1",
+  "from" : "http://demo.testfire.net",
+  "to" : "http://demo.testfire.net/login.jsp",
+  "method" : "GET",
+  "trigger" : "link_click",
+  "depth" : 0,
+  "discoveredByMutation" : false,
+  "priority" : 5,
+  "priorityReason" : "Likely Interactive State"
+}, {
+  "transitionId" : "T2",
+  "from" : "http://demo.testfire.net",
+  "to" : "http://demo.testfire.net/index.jsp?content=inside_contact.htm",
+  "method" : "GET",
+  "trigger" : "link_click",
+  "depth" : 0,
+  "discoveredByMutation" : false,
+  "priority" : 1,
+  "priorityReason" : "Normal Navigation"
+}, {
+  "transitionId" : "T3",
+  "from" : "http://demo.testfire.net",
+  "to" : "http://demo.testfire.net/feedback.jsp",
+  "method" : "GET",
+  "trigger" : "link_click",
+  "depth" : 0,
+  "discoveredByMutation" : false,
+  "priority" : 1,
+  "priorityReason" : "Normal Navigation"
+}, {
+  "transitionId" : "T4",
+  "from" : "http://demo.testfire.net",
+  "to" : "http://demo.testfire.net/login.jsp",
+  "method" : "GET",
+  "trigger" : "link_click",
+  "depth" : 0,
+  "discoveredByMutation" : false,
+  "priority" : 5,
+  "priorityReason" : "Likely Interactive State"
+}, {
+  "transitionId" : "T5",
+  "from" : "http://demo.testfire.net",
+  "to" : "http://demo.testfire.net/index.jsp?content=personal.htm",
+  "method" : "GET",
+  "trigger" : "link_click",
+  "depth" : 0,
+  "discoveredByMutation" : false,
+  "priority" : 1,
+  "priorityReason" : "Normal Navigation"
+}, {
+  "transitionId" : "T6",
+  "from" : "http://demo.testfire.net",
+  "to" : "http://demo.testfire.net/index.jsp?content=business.htm",
+  "method" : "GET",
+  "trigger" : "link_click",
+  "depth" : 0,
+  "discoveredByMutation" : false,
+  "priority" : 1,
+  "priorityReason" : "Normal Navigation"
+}, {
+  "transitionId" : "T7",
+  "from" : "http://demo.testfire.net",
+  "to" : "http://demo.testfire.net/index.jsp?content=inside.htm",
+  "method" : "GET",
+  "trigger" : "link_click",
+  "depth" : 0,
+  "discoveredByMutation" : false,
+  "priority" : 1,
+  "priorityReason" : "Normal Navigation"
+}, {
+  "transitionId" : "T8",
+  "from" : "http://demo.testfire.net",
+  "to" : "http://demo.testfire.net/index.jsp?content=personal.htm",
+  "method" : "GET",
+  "trigger" : "link_click",
+  "depth" : 0,
+  "discoveredByMutation" : false,
+  "priority" : 1,
+  "priorityReason" : "Normal Navigation"
+}, {
+  "transitionId" : "T9",
+  "from" : "http://demo.testfire.net",
+  "to" : "http://demo.testfire.net/index.jsp?content=personal_deposit.htm",
+  "method" : "GET",
+  "trigger" : "link_click",
+  "depth" : 0,
+  "discoveredByMutation" : false,
+  "priority" : 1,
+  "priorityReason" : "Normal Navigation"
+}, {
+  "transitionId" : "T10",
+  "from" : "http://demo.testfire.net",
+  "to" : "http://demo.testfire.net/index.jsp?content=personal_checking.htm",
+  "method" : "GET",
+  "trigger" : "link_click",
+  "depth" : 0,
+  "discoveredByMutation" : false,
+  "priority" : 1,
+  "priorityReason" : "Normal Navigation"
+}, {
+  "transitionId" : "T11",
+  "from" : "http://demo.testfire.net",
+  "to" : "http://demo.testfire.net/index.jsp?content=personal_loans.htm",
+  "method" : "GET",
+  "trigger" : "link_click",
+  "depth" : 0,
+  "discoveredByMutation" : false,
+  "priority" : 1,
+  "priorityReason" : "Normal Navigation"
+}, {
+  "transitionId" : "T12",
+  "from" : "http://demo.testfire.net",
+  "to" : "http://demo.testfire.net/index.jsp?content=personal_cards.htm",
+  "method" : "GET",
+  "trigger" : "link_click",
+  "depth" : 0,
+  "discoveredByMutation" : false,
+  "priority" : 1,
+  "priorityReason" : "Normal Navigation"
+}, {
+  "transitionId" : "T13",
+  "from" : "http://demo.testfire.net",
+  "to" : "http://demo.testfire.net/index.jsp?content=personal_investments.htm",
+  "method" : "GET",
+  "trigger" : "link_click",
+  "depth" : 0,
+  "discoveredByMutation" : false,
+  "priority" : 1,
+  "priorityReason" : "Normal Navigation"
+}, {
+  "transitionId" : "T14",
+  "from" : "http://demo.testfire.net",
+  "to" : "http://demo.testfire.net/index.jsp?content=personal_other.htm",
+  "method" : "GET",
+  "trigger" : "link_click",
+  "depth" : 0,
+  "discoveredByMutation" : false,
+  "priority" : 1,
+  "priorityReason" : "Normal Navigation"
+}, {
+  "transitionId" : "T15",
+  "from" : "http://demo.testfire.net",
+  "to" : "http://demo.testfire.net/index.jsp?content=business.htm",
+  "method" : "GET",
+  "trigger" : "link_click",
+  "depth" : 0,
+  "discoveredByMutation" : false,
+  "priority" : 1,
+  "priorityReason" : "Normal Navigation"
+}, {
+  "transitionId" : "T16",
+  "from" : "http://demo.testfire.net",
+  "to" : "http://demo.testfire.net/index.jsp?content=business_deposit.htm",
+  "method" : "GET",
+  "trigger" : "link_click",
+  "depth" : 0,
+  "discoveredByMutation" : false,
+  "priority" : 1,
+  "priorityReason" : "Normal Navigation"
+}, {
+  "transitionId" : "T17",
+  "from" : "http://demo.testfire.net",
+  "to" : "http://demo.testfire.net/index.jsp?content=business_lending.htm",
+  "method" : "GET",
+  "trigger" : "link_click",
+  "depth" : 0,
+  "discoveredByMutation" : false,
+  "priority" : 1,
+  "priorityReason" : "Normal Navigation"
+}, {
+  "transitionId" : "T18",
+  "from" : "http://demo.testfire.net",
+  "to" : "http://demo.testfire.net/index.jsp?content=business_cards.htm",
+  "method" : "GET",
+  "trigger" : "link_click",
+  "depth" : 0,
+  "discoveredByMutation" : false,
+  "priority" : 1,
+  "priorityReason" : "Normal Navigation"
+}, {
+  "transitionId" : "T19",
+  "from" : "http://demo.testfire.net",
+  "to" : "http://demo.testfire.net/index.jsp?content=business_insurance.htm",
+  "method" : "GET",
+  "trigger" : "link_click",
+  "depth" : 0,
+  "discoveredByMutation" : false,
+  "priority" : 1,
+  "priorityReason" : "Normal Navigation"
+}, {
+  "transitionId" : "T20",
+  "from" : "http://demo.testfire.net",
+  "to" : "http://demo.testfire.net/index.jsp?content=business_retirement.htm",
+  "method" : "GET",
+  "trigger" : "link_click",
+  "depth" : 0,
+  "discoveredByMutation" : false,
+  "priority" : 1,
+  "priorityReason" : "Normal Navigation"
+}, {
+  "transitionId" : "T21",
+  "from" : "http://demo.testfire.net",
+  "to" : "http://demo.testfire.net/index.jsp?content=business_other.htm",
+  "method" : "GET",
+  "trigger" : "link_click",
+  "depth" : 0,
+  "discoveredByMutation" : false,
+  "priority" : 1,
+  "priorityReason" : "Normal Navigation"
+}, {
+  "transitionId" : "T22",
+  "from" : "http://demo.testfire.net",
+  "to" : "http://demo.testfire.net/index.jsp?content=inside.htm",
+  "method" : "GET",
+  "trigger" : "link_click",
+  "depth" : 0,
+  "discoveredByMutation" : false,
+  "priority" : 1,
+  "priorityReason" : "Normal Navigation"
+}, {
+  "transitionId" : "T23",
+  "from" : "http://demo.testfire.net",
+  "to" : "http://demo.testfire.net/index.jsp?content=inside_about.htm",
+  "method" : "GET",
+  "trigger" : "link_click",
+  "depth" : 0,
+  "discoveredByMutation" : false,
+  "priority" : 1,
+  "priorityReason" : "Normal Navigation"
+}, {
+  "transitionId" : "T24",
+  "from" : "http://demo.testfire.net",
+  "to" : "http://demo.testfire.net/index.jsp?content=inside_contact.htm",
+  "method" : "GET",
+  "trigger" : "link_click",
+  "depth" : 0,
+  "discoveredByMutation" : false,
+  "priority" : 1,
+  "priorityReason" : "Normal Navigation"
+}, {
+  "transitionId" : "T25",
+  "from" : "http://demo.testfire.net",
+  "to" : "http://demo.testfire.net/cgi.exe",
+  "method" : "GET",
+  "trigger" : "link_click",
+  "depth" : 0,
+  "discoveredByMutation" : false,
+  "priority" : 1,
+  "priorityReason" : "Normal Navigation"
+}, {
+  "transitionId" : "T26",
+  "from" : "http://demo.testfire.net",
+  "to" : "http://demo.testfire.net/index.jsp?content=inside_investor.htm",
+  "method" : "GET",
+  "trigger" : "link_click",
+  "depth" : 0,
+  "discoveredByMutation" : false,
+  "priority" : 1,
+  "priorityReason" : "Normal Navigation"
+}, {
+  "transitionId" : "T27",
+  "from" : "http://demo.testfire.net",
+  "to" : "http://demo.testfire.net/index.jsp?content=inside_press.htm",
+  "method" : "GET",
+  "trigger" : "link_click",
+  "depth" : 0,
+  "discoveredByMutation" : false,
+  "priority" : 1,
+  "priorityReason" : "Normal Navigation"
+}, {
+  "transitionId" : "T28",
+  "from" : "http://demo.testfire.net",
+  "to" : "http://demo.testfire.net/index.jsp?content=inside_careers.htm",
+  "method" : "GET",
+  "trigger" : "link_click",
+  "depth" : 0,
+  "discoveredByMutation" : false,
+  "priority" : 1,
+  "priorityReason" : "Normal Navigation"
+}, {
+  "transitionId" : "T29",
+  "from" : "http://demo.testfire.net",
+  "to" : "http://demo.testfire.net/subscribe.jsp",
+  "method" : "GET",
+  "trigger" : "link_click",
+  "depth" : 0,
+  "discoveredByMutation" : false,
+  "priority" : 1,
+  "priorityReason" : "Normal Navigation"
+}, {
+  "transitionId" : "T30",
+  "from" : "http://demo.testfire.net",
+  "to" : "http://demo.testfire.net/index.jsp?content=personal_savings.htm",
+  "method" : "GET",
+  "trigger" : "link_click",
+  "depth" : 0,
+  "discoveredByMutation" : false,
+  "priority" : 1,
+  "priorityReason" : "Normal Navigation"
+}, {
+  "transitionId" : "T31",
+  "from" : "http://demo.testfire.net",
+  "to" : "http://demo.testfire.net/index.jsp?content=personal_loans.htm",
+  "method" : "GET",
+  "trigger" : "link_click",
+  "depth" : 0,
+  "discoveredByMutation" : false,
+  "priority" : 1,
+  "priorityReason" : "Normal Navigation"
+}, {
+  "transitionId" : "T32",
+  "from" : "http://demo.testfire.net",
+  "to" : "http://demo.testfire.net/index.jsp?content=business_cards.htm",
+  "method" : "GET",
+  "trigger" : "link_click",
+  "depth" : 0,
+  "discoveredByMutation" : false,
+  "priority" : 1,
+  "priorityReason" : "Normal Navigation"
+}, {
+  "transitionId" : "T33",
+  "from" : "http://demo.testfire.net",
+  "to" : "http://demo.testfire.net/index.jsp?content=business_retirement.htm",
+  "method" : "GET",
+  "trigger" : "link_click",
+  "depth" : 0,
+  "discoveredByMutation" : false,
+  "priority" : 1,
+  "priorityReason" : "Normal Navigation"
+}, {
+  "transitionId" : "T34",
+  "from" : "http://demo.testfire.net",
+  "to" : "http://demo.testfire.net/index.jsp?content=privacy.htm",
+  "method" : "GET",
+  "trigger" : "link_click",
+  "depth" : 0,
+  "discoveredByMutation" : false,
+  "priority" : 1,
+  "priorityReason" : "Normal Navigation"
+}, {
+  "transitionId" : "T35",
+  "from" : "http://demo.testfire.net",
+  "to" : "http://demo.testfire.net/default.jsp?content=security.htm",
+  "method" : "GET",
+  "trigger" : "link_click",
+  "depth" : 0,
+  "discoveredByMutation" : false,
+  "priority" : 1,
+  "priorityReason" : "Normal Navigation"
+}, {
+  "transitionId" : "T36",
+  "from" : "http://demo.testfire.net",
+  "to" : "http://demo.testfire.net/survey_questions.jsp",
+  "method" : "GET",
+  "trigger" : "link_click",
+  "depth" : 0,
+  "discoveredByMutation" : false,
+  "priority" : 1,
+  "priorityReason" : "Normal Navigation"
+}, {
+  "transitionId" : "T37",
+  "from" : "http://demo.testfire.net",
+  "to" : "http://demo.testfire.net/index.jsp?content=privacy.htm",
+  "method" : "GET",
+  "trigger" : "link_click",
+  "depth" : 0,
+  "discoveredByMutation" : false,
+  "priority" : 1,
+  "priorityReason" : "Normal Navigation"
+}, {
+  "transitionId" : "T38",
+  "from" : "http://demo.testfire.net",
+  "to" : "http://demo.testfire.net/index.jsp?content=security.htm",
+  "method" : "GET",
+  "trigger" : "link_click",
+  "depth" : 0,
+  "discoveredByMutation" : false,
+  "priority" : 1,
+  "priorityReason" : "Normal Navigation"
+}, {
+  "transitionId" : "T39",
+  "from" : "http://demo.testfire.net",
+  "to" : "http://demo.testfire.net/status_check.jsp",
+  "method" : "GET",
+  "trigger" : "link_click",
+  "depth" : 0,
+  "discoveredByMutation" : false,
+  "priority" : 1,
+  "priorityReason" : "Normal Navigation"
+}, {
+  "transitionId" : "T40",
+  "from" : "http://demo.testfire.net",
+  "to" : "http://demo.testfire.net/swagger/index.html",
+  "method" : "GET",
+  "trigger" : "link_click",
+  "depth" : 0,
+  "discoveredByMutation" : false,
+  "priority" : 1,
+  "priorityReason" : "Normal Navigation"
+}, {
+  "transitionId" : "T41",
+  "from" : "http://demo.testfire.net",
+  "to" : "https://github.com/AppSecDev/AltoroJ/",
+  "method" : "GET",
+  "trigger" : "link_click",
+  "depth" : 0,
+  "discoveredByMutation" : false,
+  "priority" : 1,
+  "priorityReason" : "Normal Navigation"
+}, {
+  "transitionId" : "T42",
+  "from" : "http://demo.testfire.net",
+  "to" : "https://www.hcl-software.com/appscan/",
   "method" : "GET",
   "trigger" : "link_click",
   "depth" : 0,
